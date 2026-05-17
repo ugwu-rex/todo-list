@@ -10,7 +10,7 @@ class TodoList {
 
     public addTodo(task: string, dueDate: Date): void {
         const newTodo: TodoItem = {
-            id: Date.now(),  //task created would be measured or identified by the exact time they were created making each task to have a unique id
+            id: Date.now() + Math.floor(Math.random() * 1000000), //updated this line with the + maths... because the tasks unfortunatly are created at the same time making same id and items can't be removed by id
             task,
             completed: false,
             dueDate
